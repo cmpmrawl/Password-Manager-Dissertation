@@ -8,7 +8,7 @@ Public Class createAccountForm
         If txtPassword.Text.Equals(txtConfirm.Text) And txtPassword.Text <> Nothing Then
             Me.password = txtPassword.Text
             entryForm.Visible = True
-            entryForm.setPassword(Me.password)
+
 
             If System.IO.File.Exists("Website.txt") = False Then
                 File.Create("Website.txt").Dispose()
@@ -20,8 +20,16 @@ Public Class createAccountForm
                 File.Create("Password.txt").Dispose()
             End If
 
+
+            Dim passSalt = entryForm.CreateNewSalt(entryForm.saltSize)
+            Dim hashedPassword = entryForm.GetSaltedHash(Me.password, passSalt)
+            entryForm.setPassword(hashedPassword)
+            entryForm.setSalt(passSalt)
+
             Dim objWriter As New System.IO.StreamWriter("Password.txt")
-            objWriter.WriteLine(Me.password)
+            objWriter.WriteLine(passSalt)
+            objWriter.WriteLine(hashedPassword)
+
             objWriter.Close()
 
             Me.Close()
