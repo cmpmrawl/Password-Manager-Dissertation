@@ -31,14 +31,8 @@ Public Class entryForm
 
     Private Sub entryForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
 
-        If System.IO.File.Exists("Website.txt") = False Then
-            File.Create("Website.txt").Dispose()
-        End If
-        If System.IO.File.Exists("Username.txt") = False Then
-            File.Create("Username.txt").Dispose()
-        End If
+
         If System.IO.File.Exists("Password.txt") = False Then
-            File.Create("Password.txt").Dispose()
             createAccountForm.Visible = True
             Me.Visible = False
         Else

@@ -1,4 +1,6 @@
-﻿Public Class createAccountForm
+﻿Imports System.IO
+
+Public Class createAccountForm
 
     Private password As String
 
@@ -7,6 +9,16 @@
             Me.password = txtPassword.Text
             entryForm.Visible = True
             entryForm.setPassword(Me.password)
+
+            If System.IO.File.Exists("Website.txt") = False Then
+                File.Create("Website.txt").Dispose()
+            End If
+            If System.IO.File.Exists("Username.txt") = False Then
+                File.Create("Username.txt").Dispose()
+            End If
+            If System.IO.File.Exists("Password.txt") = False Then
+                File.Create("Password.txt").Dispose()
+            End If
 
             Dim objWriter As New System.IO.StreamWriter("Password.txt")
             objWriter.WriteLine(Me.password)

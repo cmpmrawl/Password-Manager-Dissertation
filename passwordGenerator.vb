@@ -27,10 +27,9 @@ Public Class passwordGenerator
     Private Sub btnGenerate_Click(sender As Object, e As EventArgs) Handles btnGenerate.Click
         Randomize()
         Dim newPassword As String = ""
-        Dim symbolList As List(Of Char) = fillSymbols()
-        Dim firstWord As String
+
+        Dim password As String
         Dim randomNumber As Integer
-        Dim newWord As String = ""
 
         If tboxLength.Text <> Nothing And IsNumeric(tboxLength.Text) Then
 
@@ -44,127 +43,52 @@ Public Class passwordGenerator
 
             Do
                 randomNumber = Int(((wordList.Count - 1) * Rnd()) + 1)
-                firstWord = wordList.ElementAt(randomNumber)
-            Loop While firstWord.Length <> length
+                password = wordList.ElementAt(randomNumber)
+            Loop While password.Length <> length
 
             lblRememberHeader.Visible = True
             lblOriginalWord.Visible = True
             lblNumbDesc.Visible = True
             lblCapitalDesc.Visible = True
             lblSymbDesc.Visible = True
-            lblWord.Text = firstWord
+            lblWord.Text = password
 
             If cboxNumb.Checked = True Then
-                Dim letter As Char
+
                 Dim replace As Boolean = False
+                password = addNumbers(password, replace)
 
-                For i As Integer = 0 To firstWord.Length - 1
-                    letter = firstWord(i)
-                    Select Case letter
-                        Case "o"
-                            If Int((100 * Rnd()) + 1) < 25 Then
-                                letter = "0"
-                                replace = True
-                            End If
-
-                        Case "i"
-                            If Int((100 * Rnd()) + 1) < 25 Then
-                                letter = "1"
-                                replace = True
-                            End If
-
-                        Case "e"
-                            If Int((100 * Rnd()) + 1) < 25 Then
-                                letter = "3"
-                                replace = True
-                            End If
-
-                        Case "a"
-                            If Int((100 * Rnd()) + 1) < 25 Then
-                                letter = "4"
-                                replace = True
-                            End If
-                        Case "s"
-                            If Int((100 * Rnd()) + 1) < 25 Then
-                                letter = "5"
-                                replace = True
-                            End If
-                        Case "z"
-                            If Int((100 * Rnd()) + 1) < 25 Then
-                                letter = "2"
-                                replace = True
-                            End If
-                        Case "g"
-                            If Int((100 * Rnd()) + 1) < 25 Then
-                                letter = "6"
-                                replace = True
-                            End If
-                        Case "t"
-                            If Int((100 * Rnd()) + 1) < 25 Then
-                                letter = "7"
-                                replace = True
-                            End If
-                    End Select
-                    newWord = newWord & letter
-                Next
-                firstWord = newWord
                 If replace = True Then
-                    lblNumbers.Text = firstWord
+                    lblNumbers.Text = password
                 Else
                     randomNumber = Int((9 * Rnd()) + 1)
-                    firstWord = firstWord & randomNumber.ToString
-                    lblNumbers.Text = firstWord
+                    password = password & randomNumber.ToString
+                    lblNumbers.Text = password
                 End If
+
             Else
                 lblNumbers.Text = "N/A"
             End If
 
-            newWord = ""
             If cboxCaps.Checked = True Then
-                Dim checked As Boolean = True
 
-                Do While checked = True
-
-                    randomNumber = Int(((firstWord.Length - 1) * Rnd()) + 1)
-                    checked = checkIsNumeric(firstWord, randomNumber)
-
-                Loop
-
-                For i As Integer = 0 To firstWord.Length - 1
-
-                    If i = randomNumber Then
-                        newWord = newWord & Char.ToUpper(firstWord(i))
-                    Else
-                        newWord = newWord & firstWord(i)
-                    End If
-
-                Next
-                firstWord = newWord
-                lblCapitals.Text = firstWord
+                password = addCapitals(password)
+                lblCapitals.Text = password
             Else
                 lblCapitals.Text = "N/A"
             End If
 
 
-            newWord = ""
             If cboxSymb.Checked = True Then
-                randomNumber = Int(((firstWord.Length - 1) * Rnd()) + 0)
-                Dim newRandomNumber = Int(((symbolList.Count - 1) * Rnd()) + 1)
-                For i As Integer = 0 To firstWord.Length - 1
-                    If i = randomNumber Then
-                        newWord = newWord & symbolList(newRandomNumber) & firstWord(i)
-                    Else
-                        newWord = newWord & firstWord(i)
-                    End If
-                Next
-                firstWord = newWord
-                lblSymbols.Text = firstWord
+
+                password = addSymbols(password)
+                lblSymbols.Text = password
             Else
                 lblSymbols.Text = "N/A"
             End If
 
 
-            lblnewPassword.Text = firstWord
+            lblnewPassword.Text = password
 
         Else
 
@@ -181,6 +105,106 @@ Public Class passwordGenerator
 
         Return checked
     End Function
+
+    Private Function addNumbers(ByRef password As String, ByVal replace As Boolean)
+        Dim letter As Char
+        Dim newPassword As String = ""
+
+        For i As Integer = 0 To password.Length - 1
+            letter = password(i)
+            Select Case letter
+                Case "o"
+                    If Int((100 * Rnd()) + 1) < 25 Then
+                        letter = "0"
+                        replace = True
+                    End If
+
+                Case "i"
+                    If Int((100 * Rnd()) + 1) < 25 Then
+                        letter = "1"
+                        replace = True
+                    End If
+
+                Case "e"
+                    If Int((100 * Rnd()) + 1) < 25 Then
+                        letter = "3"
+                        replace = True
+                    End If
+
+                Case "a"
+                    If Int((100 * Rnd()) + 1) < 25 Then
+                        letter = "4"
+                        replace = True
+                    End If
+                Case "s"
+                    If Int((100 * Rnd()) + 1) < 25 Then
+                        letter = "5"
+                        replace = True
+                    End If
+                Case "z"
+                    If Int((100 * Rnd()) + 1) < 25 Then
+                        letter = "2"
+                        replace = True
+                    End If
+                Case "g"
+                    If Int((100 * Rnd()) + 1) < 25 Then
+                        letter = "6"
+                        replace = True
+                    End If
+                Case "t"
+                    If Int((100 * Rnd()) + 1) < 25 Then
+                        letter = "7"
+                        replace = True
+                    End If
+            End Select
+            newPassword = newPassword & letter
+        Next
+        Return newPassword
+    End Function
+
+    Private Function addSymbols(ByRef password As String)
+        Dim randomNumber As Integer
+        randomNumber = Int(((password.Length - 1) * Rnd()) + 0)
+        Dim symbolList As List(Of Char) = fillSymbols()
+        Dim newRandomNumber = Int(((symbolList.Count - 1) * Rnd()) + 1)
+        Dim newPassword As String = ""
+
+
+        For i As Integer = 0 To password.Length - 1
+            If i = randomNumber Then
+                newPassword = newPassword & symbolList(newRandomNumber) & password(i)
+            Else
+                newPassword = newPassword & password(i)
+            End If
+        Next
+
+        Return password
+    End Function
+
+    Private Function addCapitals(ByRef password As String)
+        Dim checked As Boolean = True
+        Dim newPassword As String = ""
+        Dim randomNumber As Integer
+
+        Do While checked = True
+
+            randomNumber = Int(((password.Length - 1) * Rnd()) + 1)
+            checked = checkIsNumeric(password, randomNumber)
+
+        Loop
+
+        For i As Integer = 0 To password.Length - 1
+
+            If i = randomNumber Then
+                newpassword = newpassword & Char.ToUpper(password(i))
+            Else
+                newpassword = newpassword & password(i)
+            End If
+
+        Next
+        Return newPassword
+    End Function
+
 
     Public Function fillSymbols()
         Dim symbolList As List(Of Char) = New List(Of Char)
@@ -203,4 +227,7 @@ Public Class passwordGenerator
         Return symbolList
     End Function
 
+    Private Sub lblCopy_Click(sender As Object, e As EventArgs) Handles lblCopy.Click
+        Clipboard.SetText(lblnewPassword.Text)
+    End Sub
 End Class
