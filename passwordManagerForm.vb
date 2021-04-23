@@ -43,6 +43,13 @@
 
     Private Sub passwordManagerForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
 
+
+        saveFiles()
+        entryForm.Close()
+
+    End Sub
+
+    Public Sub saveFiles()
         Dim Website As String = "Website.txt"
         Dim Username As String = "Username.txt"
         Dim Password As String = "Password.txt"
@@ -50,7 +57,6 @@
         writeFile(Website, 1, True)
         writeFile(Username, 2, True)
         writeFile(Password, 3, False)
-
     End Sub
 
     Private Function readFile(ByRef file As String)
@@ -73,7 +79,7 @@
 
     End Function
 
-    Private Sub writeFile(ByRef file As String, ByRef cellNumb As Integer, ByRef check As Boolean)
+    Public Sub writeFile(ByRef file As String, ByRef cellNumb As Integer, ByRef check As Boolean)
 
         If System.IO.File.Exists(file) = True Then
 

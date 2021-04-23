@@ -47,4 +47,8 @@
         txtboxUser.Text = passwordManagerForm.passwordViewDataGrid.Rows(cboxEdit.SelectedIndex).Cells(2).Value
         txtboxpass.Text = passwordManagerForm.passwordViewDataGrid.Rows(cboxEdit.SelectedIndex).Cells(3).Value
     End Sub
+
+    Private Sub editPassword_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        passwordManagerForm.Visible = True
+    End Sub
 End Class

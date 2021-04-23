@@ -36,9 +36,10 @@ Partial Class deletePassword
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(428, 95)
+        Me.btnBack.Location = New System.Drawing.Point(571, 117)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(110, 20)
+        Me.btnBack.Size = New System.Drawing.Size(147, 25)
         Me.btnBack.TabIndex = 1
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -46,17 +47,19 @@ Partial Class deletePassword
         'lblChoose
         '
         Me.lblChoose.AutoSize = True
-        Me.lblChoose.Location = New System.Drawing.Point(30, 17)
+        Me.lblChoose.Location = New System.Drawing.Point(40, 21)
+        Me.lblChoose.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblChoose.Name = "lblChoose"
-        Me.lblChoose.Size = New System.Drawing.Size(98, 13)
+        Me.lblChoose.Size = New System.Drawing.Size(129, 17)
         Me.lblChoose.TabIndex = 17
         Me.lblChoose.Text = "Choose row to edit:"
         '
         'btnRemove
         '
-        Me.btnRemove.Location = New System.Drawing.Point(324, 95)
+        Me.btnRemove.Location = New System.Drawing.Point(432, 117)
+        Me.btnRemove.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.Size = New System.Drawing.Size(98, 20)
+        Me.btnRemove.Size = New System.Drawing.Size(131, 25)
         Me.btnRemove.TabIndex = 16
         Me.btnRemove.Text = "Remove"
         Me.btnRemove.UseVisualStyleBackColor = True
@@ -64,44 +67,49 @@ Partial Class deletePassword
         'cboxRemove
         '
         Me.cboxRemove.FormattingEnabled = True
-        Me.cboxRemove.Location = New System.Drawing.Point(134, 14)
+        Me.cboxRemove.Location = New System.Drawing.Point(179, 17)
+        Me.cboxRemove.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboxRemove.Name = "cboxRemove"
-        Me.cboxRemove.Size = New System.Drawing.Size(185, 21)
+        Me.cboxRemove.Size = New System.Drawing.Size(245, 24)
         Me.cboxRemove.TabIndex = 12
         '
         'lblWeb
         '
         Me.lblWeb.AutoSize = True
-        Me.lblWeb.Location = New System.Drawing.Point(131, 48)
+        Me.lblWeb.Location = New System.Drawing.Point(175, 59)
+        Me.lblWeb.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWeb.Name = "lblWeb"
-        Me.lblWeb.Size = New System.Drawing.Size(91, 13)
+        Me.lblWeb.Size = New System.Drawing.Size(116, 17)
         Me.lblWeb.TabIndex = 18
         Me.lblWeb.Text = "Website / Source"
         '
         'lblUser
         '
         Me.lblUser.AutoSize = True
-        Me.lblUser.Location = New System.Drawing.Point(131, 72)
+        Me.lblUser.Location = New System.Drawing.Point(175, 89)
+        Me.lblUser.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(55, 13)
+        Me.lblUser.Size = New System.Drawing.Size(73, 17)
         Me.lblUser.TabIndex = 19
         Me.lblUser.Text = "Username"
         '
         'lblPass
         '
         Me.lblPass.AutoSize = True
-        Me.lblPass.Location = New System.Drawing.Point(131, 95)
+        Me.lblPass.Location = New System.Drawing.Point(175, 117)
+        Me.lblPass.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPass.Name = "lblPass"
-        Me.lblPass.Size = New System.Drawing.Size(53, 13)
+        Me.lblPass.Size = New System.Drawing.Size(69, 17)
         Me.lblPass.TabIndex = 20
         Me.lblPass.Text = "Password"
         '
         'lbldesc1
         '
         Me.lbldesc1.AutoSize = True
-        Me.lbldesc1.Location = New System.Drawing.Point(37, 48)
+        Me.lbldesc1.Location = New System.Drawing.Point(49, 59)
+        Me.lbldesc1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbldesc1.Name = "lbldesc1"
-        Me.lbldesc1.Size = New System.Drawing.Size(94, 13)
+        Me.lbldesc1.Size = New System.Drawing.Size(120, 17)
         Me.lbldesc1.TabIndex = 21
         Me.lbldesc1.Text = "Website / Source:"
         Me.lbldesc1.Visible = False
@@ -109,9 +117,10 @@ Partial Class deletePassword
         'lbldesc2
         '
         Me.lbldesc2.AutoSize = True
-        Me.lbldesc2.Location = New System.Drawing.Point(37, 72)
+        Me.lbldesc2.Location = New System.Drawing.Point(49, 89)
+        Me.lbldesc2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbldesc2.Name = "lbldesc2"
-        Me.lbldesc2.Size = New System.Drawing.Size(58, 13)
+        Me.lbldesc2.Size = New System.Drawing.Size(77, 17)
         Me.lbldesc2.TabIndex = 22
         Me.lbldesc2.Text = "Username:"
         Me.lbldesc2.Visible = False
@@ -119,18 +128,19 @@ Partial Class deletePassword
         'lbldesc3
         '
         Me.lbldesc3.AutoSize = True
-        Me.lbldesc3.Location = New System.Drawing.Point(37, 95)
+        Me.lbldesc3.Location = New System.Drawing.Point(49, 117)
+        Me.lbldesc3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbldesc3.Name = "lbldesc3"
-        Me.lbldesc3.Size = New System.Drawing.Size(56, 13)
+        Me.lbldesc3.Size = New System.Drawing.Size(73, 17)
         Me.lbldesc3.TabIndex = 23
         Me.lbldesc3.Text = "Password:"
         Me.lbldesc3.Visible = False
         '
         'deletePassword
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(547, 120)
+        Me.ClientSize = New System.Drawing.Size(729, 148)
         Me.Controls.Add(Me.lbldesc3)
         Me.Controls.Add(Me.lbldesc2)
         Me.Controls.Add(Me.lbldesc1)
@@ -141,6 +151,8 @@ Partial Class deletePassword
         Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.cboxRemove)
         Me.Controls.Add(Me.btnBack)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "deletePassword"
         Me.Text = "Remove Password"
         Me.ResumeLayout(False)

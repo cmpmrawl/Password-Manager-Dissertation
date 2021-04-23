@@ -50,4 +50,8 @@
             cboxRemove.Items.Add(idData & " - " & webData)
         Next
     End Sub
+
+    Private Sub deletePassword_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        passwordManagerForm.Visible = True
+    End Sub
 End Class

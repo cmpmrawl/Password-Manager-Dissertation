@@ -51,7 +51,7 @@ Partial Class passwordGenerator
         '
         Me.cboxCaps.AutoSize = True
         Me.cboxCaps.Location = New System.Drawing.Point(204, 78)
-        Me.cboxCaps.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboxCaps.Margin = New System.Windows.Forms.Padding(4)
         Me.cboxCaps.Name = "cboxCaps"
         Me.cboxCaps.Size = New System.Drawing.Size(80, 21)
         Me.cboxCaps.TabIndex = 0
@@ -71,7 +71,7 @@ Partial Class passwordGenerator
         'tboxLength
         '
         Me.tboxLength.Location = New System.Drawing.Point(204, 174)
-        Me.tboxLength.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tboxLength.Margin = New System.Windows.Forms.Padding(4)
         Me.tboxLength.Name = "tboxLength"
         Me.tboxLength.Size = New System.Drawing.Size(107, 22)
         Me.tboxLength.TabIndex = 2
@@ -79,7 +79,7 @@ Partial Class passwordGenerator
         'btnGenerate
         '
         Me.btnGenerate.Location = New System.Drawing.Point(145, 234)
-        Me.btnGenerate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGenerate.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGenerate.Name = "btnGenerate"
         Me.btnGenerate.Size = New System.Drawing.Size(96, 25)
         Me.btnGenerate.TabIndex = 3
@@ -100,7 +100,7 @@ Partial Class passwordGenerator
         '
         Me.cboxSymb.AutoSize = True
         Me.cboxSymb.Location = New System.Drawing.Point(204, 111)
-        Me.cboxSymb.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboxSymb.Margin = New System.Windows.Forms.Padding(4)
         Me.cboxSymb.Name = "cboxSymb"
         Me.cboxSymb.Size = New System.Drawing.Size(83, 21)
         Me.cboxSymb.TabIndex = 4
@@ -121,7 +121,7 @@ Partial Class passwordGenerator
         '
         Me.cboxNumb.AutoSize = True
         Me.cboxNumb.Location = New System.Drawing.Point(204, 145)
-        Me.cboxNumb.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboxNumb.Margin = New System.Windows.Forms.Padding(4)
         Me.cboxNumb.Name = "cboxNumb"
         Me.cboxNumb.Size = New System.Drawing.Size(87, 21)
         Me.cboxNumb.TabIndex = 6
@@ -160,7 +160,7 @@ Partial Class passwordGenerator
         'btnBack
         '
         Me.btnBack.Location = New System.Drawing.Point(249, 234)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(96, 25)
         Me.btnBack.TabIndex = 11
@@ -283,7 +283,7 @@ Partial Class passwordGenerator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(633, 282)
+        Me.ClientSize = New System.Drawing.Size(611, 273)
         Me.Controls.Add(Me.lblCopy)
         Me.Controls.Add(Me.lblWord)
         Me.Controls.Add(Me.lblNumbers)
@@ -307,7 +307,10 @@ Partial Class passwordGenerator
         Me.Controls.Add(Me.tboxLength)
         Me.Controls.Add(Me.lblCaps)
         Me.Controls.Add(Me.cboxCaps)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "passwordGenerator"
         Me.Text = "Password Generator"
         Me.ResumeLayout(False)

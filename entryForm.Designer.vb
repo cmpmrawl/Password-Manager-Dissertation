@@ -34,19 +34,18 @@ Partial Class entryForm
         'txtbox_password
         '
         Me.txtbox_password.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtbox_password.Location = New System.Drawing.Point(172, 88)
-        Me.txtbox_password.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtbox_password.Location = New System.Drawing.Point(229, 108)
+        Me.txtbox_password.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtbox_password.Name = "txtbox_password"
         Me.txtbox_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtbox_password.Size = New System.Drawing.Size(283, 27)
+        Me.txtbox_password.Size = New System.Drawing.Size(376, 27)
         Me.txtbox_password.TabIndex = 0
         '
         'lbl_passwordIndicator
         '
         Me.lbl_passwordIndicator.AutoSize = True
         Me.lbl_passwordIndicator.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_passwordIndicator.Location = New System.Drawing.Point(80, 91)
-        Me.lbl_passwordIndicator.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_passwordIndicator.Location = New System.Drawing.Point(107, 112)
         Me.lbl_passwordIndicator.Name = "lbl_passwordIndicator"
         Me.lbl_passwordIndicator.Size = New System.Drawing.Size(88, 20)
         Me.lbl_passwordIndicator.TabIndex = 1
@@ -54,10 +53,10 @@ Partial Class entryForm
         '
         'btn_submit
         '
-        Me.btn_submit.Location = New System.Drawing.Point(478, 91)
-        Me.btn_submit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_submit.Location = New System.Drawing.Point(637, 112)
+        Me.btn_submit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_submit.Name = "btn_submit"
-        Me.btn_submit.Size = New System.Drawing.Size(88, 23)
+        Me.btn_submit.Size = New System.Drawing.Size(117, 28)
         Me.btn_submit.TabIndex = 2
         Me.btn_submit.Text = "Submit"
         Me.btn_submit.UseVisualStyleBackColor = True
@@ -66,8 +65,7 @@ Partial Class entryForm
         '
         Me.lbl_passwordManagerHeader.AutoSize = True
         Me.lbl_passwordManagerHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_passwordManagerHeader.Location = New System.Drawing.Point(165, 31)
-        Me.lbl_passwordManagerHeader.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_passwordManagerHeader.Location = New System.Drawing.Point(252, 38)
         Me.lbl_passwordManagerHeader.Name = "lbl_passwordManagerHeader"
         Me.lbl_passwordManagerHeader.Size = New System.Drawing.Size(299, 38)
         Me.lbl_passwordManagerHeader.TabIndex = 3
@@ -75,16 +73,18 @@ Partial Class entryForm
         '
         'entryForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(629, 140)
+        Me.ClientSize = New System.Drawing.Size(839, 156)
         Me.Controls.Add(Me.lbl_passwordManagerHeader)
         Me.Controls.Add(Me.btn_submit)
         Me.Controls.Add(Me.lbl_passwordIndicator)
         Me.Controls.Add(Me.txtbox_password)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "entryForm"
         Me.Text = "Password Manager"
         Me.ResumeLayout(False)

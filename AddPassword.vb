@@ -11,4 +11,8 @@
         txtUser.Text = ""
         txtPass.Text = ""
     End Sub
+
+    Private Sub AddPassword_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        passwordManagerForm.Visible = True
+    End Sub
 End Class

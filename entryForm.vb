@@ -42,5 +42,12 @@ Public Class entryForm
         End If
     End Sub
 
+    Private Sub entryForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+
+        If passwordManagerForm.Visible = True Then
+            passwordManagerForm.saveFiles()
+        End If
+
+    End Sub
 
 End Class

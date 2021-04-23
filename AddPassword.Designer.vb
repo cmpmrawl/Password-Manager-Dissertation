@@ -34,9 +34,10 @@ Partial Class AddPassword
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(372, 63)
+        Me.btnBack.Location = New System.Drawing.Point(496, 78)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(92, 21)
+        Me.btnBack.Size = New System.Drawing.Size(123, 26)
         Me.btnBack.TabIndex = 0
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -44,65 +45,72 @@ Partial Class AddPassword
         'lblWebsite
         '
         Me.lblWebsite.AutoSize = True
-        Me.lblWebsite.Location = New System.Drawing.Point(12, 18)
+        Me.lblWebsite.Location = New System.Drawing.Point(16, 22)
+        Me.lblWebsite.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWebsite.Name = "lblWebsite"
-        Me.lblWebsite.Size = New System.Drawing.Size(94, 13)
+        Me.lblWebsite.Size = New System.Drawing.Size(120, 17)
         Me.lblWebsite.TabIndex = 2
         Me.lblWebsite.Text = "Website / Source:"
         '
         'txtWeb
         '
-        Me.txtWeb.Location = New System.Drawing.Point(112, 15)
+        Me.txtWeb.Location = New System.Drawing.Point(149, 18)
+        Me.txtWeb.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtWeb.Name = "txtWeb"
-        Me.txtWeb.Size = New System.Drawing.Size(173, 20)
+        Me.txtWeb.Size = New System.Drawing.Size(229, 22)
         Me.txtWeb.TabIndex = 3
         '
         'txtUser
         '
-        Me.txtUser.Location = New System.Drawing.Point(112, 39)
+        Me.txtUser.Location = New System.Drawing.Point(149, 48)
+        Me.txtUser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(173, 20)
+        Me.txtUser.Size = New System.Drawing.Size(229, 22)
         Me.txtUser.TabIndex = 6
         '
         'lblUsername
         '
         Me.lblUsername.AutoSize = True
-        Me.lblUsername.Location = New System.Drawing.Point(12, 42)
+        Me.lblUsername.Location = New System.Drawing.Point(16, 52)
+        Me.lblUsername.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(58, 13)
+        Me.lblUsername.Size = New System.Drawing.Size(77, 17)
         Me.lblUsername.TabIndex = 5
         Me.lblUsername.Text = "Username:"
         '
         'txtPass
         '
-        Me.txtPass.Location = New System.Drawing.Point(112, 63)
+        Me.txtPass.Location = New System.Drawing.Point(149, 78)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(173, 20)
+        Me.txtPass.Size = New System.Drawing.Size(229, 22)
         Me.txtPass.TabIndex = 9
         '
         'lblPassword
         '
         Me.lblPassword.AutoSize = True
-        Me.lblPassword.Location = New System.Drawing.Point(12, 66)
+        Me.lblPassword.Location = New System.Drawing.Point(16, 81)
+        Me.lblPassword.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(56, 13)
+        Me.lblPassword.Size = New System.Drawing.Size(73, 17)
         Me.lblPassword.TabIndex = 8
         Me.lblPassword.Text = "Password:"
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(291, 63)
+        Me.btnAdd.Location = New System.Drawing.Point(388, 78)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 21)
+        Me.btnAdd.Size = New System.Drawing.Size(100, 26)
         Me.btnAdd.TabIndex = 7
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
         'AddPassword
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(470, 92)
+        Me.ClientSize = New System.Drawing.Size(627, 113)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.btnAdd)
@@ -112,6 +120,7 @@ Partial Class AddPassword
         Me.Controls.Add(Me.lblWebsite)
         Me.Controls.Add(Me.btnBack)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "AddPassword"
         Me.Text = "Add Password"
         Me.ResumeLayout(False)

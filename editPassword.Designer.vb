@@ -36,9 +36,10 @@ Partial Class editPassword
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(422, 93)
+        Me.btnBack.Location = New System.Drawing.Point(563, 114)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(98, 20)
+        Me.btnBack.Size = New System.Drawing.Size(131, 25)
         Me.btnBack.TabIndex = 1
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -46,37 +47,42 @@ Partial Class editPassword
         'cboxEdit
         '
         Me.cboxEdit.FormattingEnabled = True
-        Me.cboxEdit.Location = New System.Drawing.Point(128, 12)
+        Me.cboxEdit.Location = New System.Drawing.Point(171, 15)
+        Me.cboxEdit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboxEdit.Name = "cboxEdit"
-        Me.cboxEdit.Size = New System.Drawing.Size(185, 21)
+        Me.cboxEdit.Size = New System.Drawing.Size(245, 24)
         Me.cboxEdit.TabIndex = 2
         '
         'txtboxWebsite
         '
-        Me.txtboxWebsite.Location = New System.Drawing.Point(128, 43)
+        Me.txtboxWebsite.Location = New System.Drawing.Point(171, 53)
+        Me.txtboxWebsite.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtboxWebsite.Name = "txtboxWebsite"
-        Me.txtboxWebsite.Size = New System.Drawing.Size(184, 20)
+        Me.txtboxWebsite.Size = New System.Drawing.Size(244, 22)
         Me.txtboxWebsite.TabIndex = 3
         '
         'txtboxpass
         '
-        Me.txtboxpass.Location = New System.Drawing.Point(128, 93)
+        Me.txtboxpass.Location = New System.Drawing.Point(171, 114)
+        Me.txtboxpass.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtboxpass.Name = "txtboxpass"
-        Me.txtboxpass.Size = New System.Drawing.Size(184, 20)
+        Me.txtboxpass.Size = New System.Drawing.Size(244, 22)
         Me.txtboxpass.TabIndex = 4
         '
         'txtboxUser
         '
-        Me.txtboxUser.Location = New System.Drawing.Point(128, 67)
+        Me.txtboxUser.Location = New System.Drawing.Point(171, 82)
+        Me.txtboxUser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtboxUser.Name = "txtboxUser"
-        Me.txtboxUser.Size = New System.Drawing.Size(184, 20)
+        Me.txtboxUser.Size = New System.Drawing.Size(244, 22)
         Me.txtboxUser.TabIndex = 5
         '
         'btnEdit
         '
-        Me.btnEdit.Location = New System.Drawing.Point(318, 93)
+        Me.btnEdit.Location = New System.Drawing.Point(424, 114)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(98, 20)
+        Me.btnEdit.Size = New System.Drawing.Size(131, 25)
         Me.btnEdit.TabIndex = 6
         Me.btnEdit.Text = "Submit"
         Me.btnEdit.UseVisualStyleBackColor = True
@@ -84,44 +90,48 @@ Partial Class editPassword
         'lblChoose
         '
         Me.lblChoose.AutoSize = True
-        Me.lblChoose.Location = New System.Drawing.Point(24, 15)
+        Me.lblChoose.Location = New System.Drawing.Point(32, 18)
+        Me.lblChoose.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblChoose.Name = "lblChoose"
-        Me.lblChoose.Size = New System.Drawing.Size(111, 15)
+        Me.lblChoose.Size = New System.Drawing.Size(129, 17)
         Me.lblChoose.TabIndex = 7
         Me.lblChoose.Text = "Choose row to edit:"
         '
         'lblWeb
         '
         Me.lblWeb.AutoSize = True
-        Me.lblWeb.Location = New System.Drawing.Point(3, 43)
+        Me.lblWeb.Location = New System.Drawing.Point(4, 53)
+        Me.lblWeb.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWeb.Name = "lblWeb"
-        Me.lblWeb.Size = New System.Drawing.Size(130, 15)
+        Me.lblWeb.Size = New System.Drawing.Size(151, 17)
         Me.lblWeb.TabIndex = 8
         Me.lblWeb.Text = "New Website / Source:"
         '
         'lblUser
         '
         Me.lblUser.AutoSize = True
-        Me.lblUser.Location = New System.Drawing.Point(39, 70)
+        Me.lblUser.Location = New System.Drawing.Point(52, 86)
+        Me.lblUser.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(96, 15)
+        Me.lblUser.Size = New System.Drawing.Size(108, 17)
         Me.lblUser.TabIndex = 9
         Me.lblUser.Text = "New Username:"
         '
         'lblPass
         '
         Me.lblPass.AutoSize = True
-        Me.lblPass.Location = New System.Drawing.Point(41, 96)
+        Me.lblPass.Location = New System.Drawing.Point(55, 118)
+        Me.lblPass.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPass.Name = "lblPass"
-        Me.lblPass.Size = New System.Drawing.Size(92, 15)
+        Me.lblPass.Size = New System.Drawing.Size(104, 17)
         Me.lblPass.TabIndex = 10
         Me.lblPass.Text = "New Password:"
         '
         'editPassword
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(527, 136)
+        Me.ClientSize = New System.Drawing.Size(703, 148)
         Me.Controls.Add(Me.lblPass)
         Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.lblWeb)
@@ -133,6 +143,7 @@ Partial Class editPassword
         Me.Controls.Add(Me.cboxEdit)
         Me.Controls.Add(Me.btnBack)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "editPassword"
         Me.Text = "Edit Password"
         Me.ResumeLayout(False)

@@ -230,4 +230,8 @@ Public Class passwordGenerator
     Private Sub lblCopy_Click(sender As Object, e As EventArgs) Handles lblCopy.Click
         Clipboard.SetText(lblnewPassword.Text)
     End Sub
+
+    Private Sub passwordGenerator_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        passwordManagerForm.Visible = True
+    End Sub
 End Class
