@@ -26,44 +26,72 @@ Public Class passwordGenerator
 
     Private Sub btnGenerate_Click(sender As Object, e As EventArgs) Handles btnGenerate.Click
         Randomize()
-        Dim newPassword As String = ""
-
+        Dim twoPassword As String = ""
+        Dim twoWords As Boolean = False
         Dim password As String
         Dim randomNumber As Integer
+        Dim randomNumberTwo As Integer
 
         If tboxLength.Text <> Nothing And IsNumeric(tboxLength.Text) Then
-
-            Dim length As Integer
-            If cboxSymb.Checked = True Or cboxNumb.Checked = True Then
-                length = tboxLength.Text - 1
-            Else
-                length = tboxLength.Text
+            Dim length As Integer = tboxLength.Text
+            If tboxLength.Text >= 8 Then
+                If tboxLength.Text Mod 2 = 0 Then
+                    length = tboxLength.Text / 2
+                    twoWords = True
+                Else
+                    length = tboxLength.Text
+                End If
             End If
 
+            If cboxSymb.Checked = True Or cboxNumb.Checked = True Then
+                length = length - 1
+            End If
 
-            Do
-                randomNumber = Int(((wordList.Count - 1) * Rnd()) + 1)
-                password = wordList.ElementAt(randomNumber)
-            Loop While password.Length <> length
+            If twoWords = True Then
+                Do
+                    randomNumber = Int(((wordList.Count - 1) * Rnd()) + 1)
+                    password = wordList.ElementAt(randomNumber)
+                Loop While password.Length <> length
+                Do
+                    randomNumberTwo = Int(((wordList.Count - 1) * Rnd()) + 1)
+                    twoPassword = wordList.ElementAt(randomNumberTwo)
+                Loop While twoPassword.Length <> length
+            Else
+                Do
+                    randomNumber = Int(((wordList.Count - 1) * Rnd()) + 1)
+                    password = wordList.ElementAt(randomNumber)
+                Loop While password.Length <> length
+            End If
+
 
             lblRememberHeader.Visible = True
             lblOriginalWord.Visible = True
             lblNumbDesc.Visible = True
             lblCapitalDesc.Visible = True
             lblSymbDesc.Visible = True
-            lblWord.Text = password
+            lblWord.Text = password & " " & twoPassword
 
             If cboxNumb.Checked = True Then
 
                 Dim replace As Boolean = False
                 password = addNumbers(password, replace)
 
+                If twoWords = True Then
+                    Dim replaceTwo As Boolean = False
+                    twoPassword = addNumbers(twoPassword, replaceTwo)
+                    'copy below if statement here
+                End If
+
                 If replace = True Then
-                    lblNumbers.Text = password
+                    lblNumbers.Text = password & " " & twoPassword
                 Else
+                    If twoWords = True Then
+                        randomNumberTwo = Int((9 * Rnd()) + 1)
+                        twoPassword = twoPassword & randomNumberTwo.ToString
+                    End If
                     randomNumber = Int((9 * Rnd()) + 1)
                     password = password & randomNumber.ToString
-                    lblNumbers.Text = password
+                    lblNumbers.Text = password & " " & twoPassword
                 End If
 
             Else
@@ -71,24 +99,28 @@ Public Class passwordGenerator
             End If
 
             If cboxCaps.Checked = True Then
-
+                If twoWords = True Then
+                    twoPassword = addCapitals(twoPassword)
+                End If
                 password = addCapitals(password)
-                lblCapitals.Text = password
+                lblCapitals.Text = password & " " & twoPassword
             Else
                 lblCapitals.Text = "N/A"
             End If
 
 
             If cboxSymb.Checked = True Then
-
+                If twoWords = True Then
+                    twoPassword = addSymbols(twoPassword)
+                End If
                 password = addSymbols(password)
-                lblSymbols.Text = password
+                lblSymbols.Text = password & " " & twoPassword
             Else
                 lblSymbols.Text = "N/A"
             End If
 
 
-            lblnewPassword.Text = password
+            lblnewPassword.Text = password & twoPassword
 
         Else
 
@@ -178,7 +210,7 @@ Public Class passwordGenerator
             End If
         Next
 
-        Return password
+        Return newPassword
     End Function
 
     Private Function addCapitals(ByRef password As String)
